@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import AppBarExample from './App';
+import NewAccounts from './newAccounts';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <App />, 
-    document.getElementById('root')
+    <AppBarExample />, 
+    document.getElementById('AppBar')
+);
+ReactDOM.render(
+    <NewAccounts />, 
+    document.getElementById('NewAccounts')
 );
 registerServiceWorker();
