@@ -30,14 +30,9 @@ const tilesData = [
     subtitle: 'Account Maintenance from clients',
   },
   {
-    img: require('./images/client-trade.jpg'),
-    title: 'Client Directed Trades',
-    subtitle: 'Clinets choose there own trades',
-  },
-  {
     img: require('./images/system-trade.jpg'),
-    title: 'System Directed Trades',
-    subtitle: 'System handles the trades',
+    title: 'Pending Trades',
+    subtitle: 'Handles pending trades',
   },
 ];
 
@@ -48,7 +43,8 @@ const IndexGridList = () => (
   <div style={styles.root}>
     <MuiThemeProvider>
       <GridList
-        cellHeight={300}
+        cellHeight={600}
+        cols={3}
         style={styles.gridList}
       >
         {tilesData.map((tile) => (
