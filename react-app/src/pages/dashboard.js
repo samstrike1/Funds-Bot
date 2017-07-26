@@ -6,7 +6,14 @@ import IndexGridList from '../components/indexGridList';
 class Dashboard extends React.Component {
    render() {
       return (
-         <IndexGridList />
+        <div>
+            <h4 style= {{
+                    marginLeft: '20px',
+                }}>
+                <b>Dashboard</b>
+            </h4>
+            <IndexGridList />
+        </div>
       )
    }
 }
