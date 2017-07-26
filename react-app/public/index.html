@@ -8,6 +8,28 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="./materialize.min.css"  media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    .tile-link > div:hover{
+      opacity: 0.5;
+    }
+    
+    .table-link:hover{
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .rotatingRow .hide{
+      transition: height 500ms 500ms, opacity 500ms 0ms;
+      opacity: 0.0;
+      display:none;
+    }
+
+    .rotatingRow .show{
+      transition: height 500ms 0ms, opacity 500ms 500ms;
+      opacity: 1.0;
+      display: initial;
+    }
+  </style>
+
 </head>
 <body style="margin: 0px; padding: 0px;">
   <div id="App"></div>
