@@ -1,6 +1,7 @@
 import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
 
 const styles = {
   root: {
@@ -20,17 +21,17 @@ const styles = {
 
 const tilesData = [
   {
-    img: require('./images/acc-app.jpg'),
+    img: require('../images/acc-app.jpg'),
     title: 'New Accounts',
     subtitle: 'New Accounts from clients',
   },
   {
-    img: require('./images/acc-maint.jpg'),
+    img: require('../images/acc-maint.jpg'),
     title: 'Account Maintenance',
     subtitle: 'Account Maintenance from clients',
   },
   {
-    img: require('./images/system-trade.jpg'),
+    img: require('../images/system-trade.jpg'),
     title: 'Pending Trades',
     subtitle: 'Handles pending trades',
   },
@@ -48,13 +49,15 @@ const IndexGridList = () => (
         style={styles.gridList}
       >
         {tilesData.map((tile) => (
-          <GridTile
-            key={tile.img}
-            title={tile.title}
-            subtitle={<span style={styles.subtitle}>{tile.subtitle}</span>}
-          >
-            <img alt="splash" src={tile.img} />
-          </GridTile>
+          <Link to="new-accounts">
+            <GridTile
+              key={tile.img}
+              title={tile.title}
+              subtitle={<span style={styles.subtitle}>{tile.subtitle}</span>}
+            >
+              <img alt="splash" src={tile.img} />
+            </GridTile>
+          </Link>
         ))}
       </GridList>
     </MuiThemeProvider>

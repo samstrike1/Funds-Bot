@@ -1,20 +1,18 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
+import AppBarExample from './components/AppBar';
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
-const AppBarExample = () => (
-    <MuiThemeProvider>
-        <AppBar
-            title="Funds-Bot"
-            style= {{
-                backgroundColor: '#ee6e73',
-            }}
-        />
-    </MuiThemeProvider>
-);
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <AppBarExample />
+				
+           {this.props.children}
+         </div>
+      )
+   }
+}
 
-export default AppBarExample;
+export default App;
