@@ -14,10 +14,14 @@ import NavigationArrowForward from 'material-ui/svg-icons/navigation/arrow-forwa
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
  */
+
 const NewAccountsTable = () => (
   <MuiThemeProvider>
     <Table>
-      <TableHeader>
+      <TableHeader
+          displaySelectAll={false}
+          adjustForCheckbox={false}    
+        >
         <TableRow>
           <TableHeaderColumn></TableHeaderColumn>
           <TableHeaderColumn><b>Name</b></TableHeaderColumn>
@@ -29,8 +33,8 @@ const NewAccountsTable = () => (
           <TableHeaderColumn></TableHeaderColumn>
         </TableRow>
       </TableHeader>
-      <TableBody>
-        <TableRow>
+      <TableBody displayRowCheckbox={false} >
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>John Smith</TableRowColumn>
           <TableRowColumn>RRSP</TableRowColumn>
@@ -44,7 +48,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'signed badge'}></span></TableRowColumn>
           <TableRowColumn>Randal White</TableRowColumn>
           <TableRowColumn>RESP</TableRowColumn>
@@ -58,7 +62,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>Stephanie Sanders</TableRowColumn>
           <TableRowColumn>Individual</TableRowColumn>
@@ -72,7 +76,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>Steve Brown</TableRowColumn>
           <TableRowColumn>Joint</TableRowColumn>
@@ -86,7 +90,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>Christopher Nolan</TableRowColumn>
           <TableRowColumn>Individual</TableRowColumn>
@@ -100,7 +104,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'signed badge'}></span></TableRowColumn>
           <TableRowColumn>Sam Adams</TableRowColumn>
           <TableRowColumn>Joint</TableRowColumn>
@@ -114,7 +118,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>James Abalone</TableRowColumn>
           <TableRowColumn>RRSP</TableRowColumn>
@@ -128,7 +132,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'signed badge'}></span></TableRowColumn>
           <TableRowColumn>Melissa Roberts</TableRowColumn>
           <TableRowColumn>Joint</TableRowColumn>
@@ -142,7 +146,7 @@ const NewAccountsTable = () => (
             </IconButton>
           </TableRowColumn>
         </TableRow>
-        <TableRow>
+        <TableRow className="rowRotation table-link">
           <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
           <TableRowColumn>Francis Williams</TableRowColumn>
           <TableRowColumn>RESP</TableRowColumn>

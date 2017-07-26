@@ -6,6 +6,7 @@ import CommunicationPhone from 'material-ui/svg-icons/communication/phone'
 import SearchBar from 'material-ui-search-bar'
 import ActionFace from 'material-ui/svg-icons/action/face'
 import Badge from 'material-ui/Badge';
+import PhoneDialog from './PhoneDialog';
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -17,7 +18,7 @@ const AppBarExample = () => (
             style= {{
                 backgroundColor: '#e11836',
             }}
-            showMenuIconButton='false'
+            showMenuIconButton={false}
             iconElementRight={
             <div>
                 <span style={{float: 'left', marginRight: '35px',}}>
@@ -26,7 +27,7 @@ const AppBarExample = () => (
                         badgeStyle={{top: 2, right: 2, width: '18px', height:'18px', backgroundColor:'rgb(0, 188, 212)', color:'#fff', fontWeight: 600, fontSize: 13,}}
                         style={{padding: '0px'}}
                     >
-                        <IconButton><CommunicationPhone color={ '#fff' }/></IconButton>
+                        <PhoneDialog />
                     </Badge>
                 </span>
                     <SearchBar
