@@ -24,19 +24,22 @@ const tilesData = [
     img: require('../images/acc-app.jpg'),
     title: 'New Accounts',
     subtitle: 'New Accounts from clients',
+    url: 'new-accounts',
   },
   {
     img: require('../images/acc-maint.jpg'),
     title: 'Account Maintenance',
     subtitle: 'Account Maintenance from clients',
+    url: '#',
   },
   {
     img: require('../images/system-trade.jpg'),
     title: 'Pending Trades',
     subtitle: 'Handles pending trades',
+    url: 'pending-trades',
   },
 ];
-
+  
 /**
  * A simple example of a scrollable `GridList` containing a [Subheader](/#/components/subheader).
  */
@@ -49,7 +52,10 @@ const IndexGridList = () => (
         style={styles.gridList}
       >
         {tilesData.map((tile) => (
-          <Link to="new-accounts">
+          <Link
+            className="tile-link"
+            to={tile.url}
+          >
             <GridTile
               key={tile.img}
               title={tile.title}
