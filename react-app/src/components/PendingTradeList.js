@@ -10,6 +10,8 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+import IconButton from 'material-ui/IconButton';
+import NavigationArrowForward from 'material-ui/svg-icons/navigation/arrow-forward'
 
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
@@ -33,12 +35,13 @@ export default class PendingTradesList extends React.Component {
                         adjustForCheckbox={this.state.showCheckboxes}    
                     >
                     <TableRow>
-                        <TableHeaderColumn>Account</TableHeaderColumn>
-                        <TableHeaderColumn>Name</TableHeaderColumn>
-                        <TableHeaderColumn>Client</TableHeaderColumn>
-                        <TableHeaderColumn># Trades</TableHeaderColumn>
-                        <TableHeaderColumn>$ Value</TableHeaderColumn>
-                        <TableHeaderColumn>Source</TableHeaderColumn>
+                        <TableHeaderColumn><b>Account No.</b></TableHeaderColumn>
+                        <TableHeaderColumn><b>Account Name</b></TableHeaderColumn>
+                        <TableHeaderColumn><b>Client</b></TableHeaderColumn>
+                        <TableHeaderColumn><b># Trades</b></TableHeaderColumn>
+                        <TableHeaderColumn><b>$ Value</b></TableHeaderColumn>
+                        <TableHeaderColumn><b>Source</b></TableHeaderColumn>
+                        <TableHeaderColumn></TableHeaderColumn>
                     </TableRow>
                     </TableHeader>
                     <TableBody
@@ -52,6 +55,11 @@ export default class PendingTradesList extends React.Component {
                             <TableRowColumn>{pt.trades}</TableRowColumn>
                             <TableRowColumn>{pt.value}</TableRowColumn>
                             <TableRowColumn>{pt.source}</TableRowColumn>
+                            <TableRowColumn>
+                                <IconButton>
+                                    <NavigationArrowForward />
+                                </IconButton>
+                            </TableRowColumn>
                         </TableRow>
                     ))}
                     </TableBody>

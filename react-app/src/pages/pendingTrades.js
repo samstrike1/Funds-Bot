@@ -14,7 +14,18 @@ class PendingTrades extends React.Component {
    };
 
    render() {
-        return (this.getView());      
+        return (
+            <div>
+                <div>
+                <h4 style= {{
+                        marginLeft: '20px',
+                    }}>
+                    <b>Pending Trades</b>
+                </h4>
+                </div>
+                {this.getView()}
+            </div>
+        );      
    }
 }
 
