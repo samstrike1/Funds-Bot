@@ -11,8 +11,18 @@ class NewAccounts extends React.Component {
             <h4 style= {{
                     marginLeft: '20px',
                 }}>
-                <b>New Accounts</b>
+                <b>Account Onboarding</b>
             </h4>
+            </div>
+            <div>
+                <h2 style= {{fontSize: 24,
+                            paddingTop: 16,
+                            marginBottom: 12,
+                            fontWeight: 400,
+                            textAlign: 'center',}}
+                >
+                9 New Accounts Ready for Onboarding
+                </h2>
             </div>
             <NewAccountsTable />
         </div>

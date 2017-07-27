@@ -1,5 +1,6 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import CommunicationPhone from 'material-ui/svg-icons/communication/phone'
@@ -7,6 +8,7 @@ import SearchBar from 'material-ui-search-bar'
 import ActionFace from 'material-ui/svg-icons/action/face'
 import Badge from 'material-ui/Badge';
 import PhoneDialog from './PhoneDialog';
+import ActionHome from 'material-ui/svg-icons/action/home'
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -18,7 +20,7 @@ const AppBarExample = () => (
             style= {{
                 backgroundColor: '#e11836',
             }}
-            showMenuIconButton={false}
+            iconElementLeft={<Link to="/"><IconButton><ActionHome color={ '#fff' }/></IconButton></Link>}
             iconElementRight={
             <div>
                 <span style={{float: 'left', marginRight: '35px',}}>
