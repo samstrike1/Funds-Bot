@@ -9,7 +9,20 @@ class PendingTrades extends React.Component {
         if(this.props.params.account != null){  //checks to see if account param is provided.
             return (<PendingTradeInfo {...this.props} />)
         } else {
-            return (<PendingTradeList />)
+            return (
+            <div>
+                <h2 style= {{fontSize: 24,
+                            paddingTop: 16,
+                            marginBottom: 12,
+                            fontWeight: 400,
+                            textAlign: 'center',}}
+                >
+                5 Trades Pending
+                </h2>
+                <PendingTradeList />
+            </div>
+                
+            )
         }
    };
 
@@ -17,11 +30,11 @@ class PendingTrades extends React.Component {
         return (
             <div>
                 <div>
-                <h4 style= {{
-                        marginLeft: '20px',
-                    }}>
-                    <b>Pending Trades</b>
-                </h4>
+                    <h4 style= {{
+                            marginLeft: '20px',
+                        }}>
+                        <b>Pending Trades</b>
+                    </h4>
                 </div>
                 {this.getView()}
             </div>

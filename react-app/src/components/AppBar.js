@@ -16,6 +16,7 @@ import ActionHome from 'material-ui/svg-icons/action/home'
 const AppBarExample = () => (
     <MuiThemeProvider>
         <AppBar
+            className="app-bar"
             title="Funds-Bot"
             style= {{
                 backgroundColor: '#e11836',
