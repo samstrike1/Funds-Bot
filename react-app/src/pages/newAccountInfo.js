@@ -25,7 +25,7 @@ class NewAccountInfo extends React.Component {
                 <RaisedButton label="KYC Document" backgroundColor={'rgb(225, 24, 54)'} labelColor={'#fff'} style={style} />
                 <RaisedButton label="RRSP Application" backgroundColor={'rgb(225, 24, 54)'} labelColor={'#fff'} style={style} />
                 <RaisedButton label="Send For Signature" backgroundColor={'#2196F3'} labelColor={'#fff'} style={style} />
-                <RaisedButton label="Approve" backgroundColor={'#4CAF50'} labelColor={'#fff'} style={style} buttonStyle={{fontColor: '#fff',}} />
+                <RaisedButton label="Approve & E-Sign" backgroundColor={'#4CAF50'} labelColor={'#fff'} style={style} buttonStyle={{fontColor: '#fff',}} />
               </div>
             </MuiThemeProvider>
             <AccountInfoTabs />

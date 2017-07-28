@@ -63,7 +63,7 @@ class NewAccountsTable extends React.Component {
                 <TableRow className="rowRotation table-link">
                   <TableRowColumn><span className={'signed badge'}></span></TableRowColumn>
                   <TableRowColumn>Randal White</TableRowColumn>
-                  <TableRowColumn>RESP</TableRowColumn>
+                  <TableRowColumn>Joint</TableRowColumn>
                   <TableRowColumn>Education</TableRowColumn>
                   <TableRowColumn>Growth</TableRowColumn>
                   <TableRowColumn>$5,000</TableRowColumn>
@@ -117,10 +117,10 @@ class NewAccountsTable extends React.Component {
                   </TableRowColumn>
                 </TableRow>
                 <TableRow className="rowRotation table-link">
-                  <TableRowColumn><span className={'signed badge'}></span></TableRowColumn>
+                  <TableRowColumn><span className={'new badge'}></span></TableRowColumn>
                   <TableRowColumn>Sam Adams</TableRowColumn>
-                  <TableRowColumn>Joint</TableRowColumn>
-                  <TableRowColumn>Build Wealth</TableRowColumn>
+                  <TableRowColumn>RRSP</TableRowColumn>
+                  <TableRowColumn>Retirement</TableRowColumn>
                   <TableRowColumn>Growth</TableRowColumn>
                   <TableRowColumn>$100,000</TableRowColumn>
                   <TableRowColumn>(426) 100-8453</TableRowColumn>

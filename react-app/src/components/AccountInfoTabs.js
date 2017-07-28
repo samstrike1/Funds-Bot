@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
 import AccountInformation from './AccountInformation';
+import BankInformation from './BankInformation';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const styles = {
@@ -26,7 +27,7 @@ const AccountInfoTabs = () => (
       <Tab label="Bank Information" >
         <div>
           <h2 style={styles.headline}>Bank Information</h2>
-          
+            <BankInformation />
         </div>
       </Tab>
     </Tabs>

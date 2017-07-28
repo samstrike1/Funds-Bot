@@ -24,22 +24,22 @@ const styles = {
 const tilesData = [
   {
     img: require('../images/acc-app.jpg'),
-    title: 'New Accounts',
-    subtitle: 'New Accounts from clients',
+    title: 'Account Onboarding',
+    subtitle: 'New Accounts Ready for Process',
     url: 'new-accounts',
     bubble: '9',
   },
   {
     img: require('../images/acc-maint.jpg'),
     title: 'Account Maintenance',
-    subtitle: 'Account Maintenance from clients',
+    subtitle: 'Account Maintenance of Existing Accounts',
     url: '#',
     bubble: '0',
   },
   {
     img: require('../images/system-trade.jpg'),
     title: 'Pending Trades',
-    subtitle: 'Handles pending trades',
+    subtitle: 'Handle Clients Pending Trades',
     url: 'pending-trades',
     bubble: '5',
   },
