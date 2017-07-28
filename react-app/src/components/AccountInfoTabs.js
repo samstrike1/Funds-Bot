@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
 import AccountInformation from './AccountInformation';
@@ -10,6 +10,7 @@ const styles = {
     paddingTop: 16,
     marginBottom: 12,
     fontWeight: 400,
+    marginLeft: 20,
   },
 };
 
