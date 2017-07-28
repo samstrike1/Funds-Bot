@@ -139,10 +139,10 @@ export default class PendingTradesList extends React.Component {
                                 adjustForCheckbox={this.state.showCheckboxes}    
                             >
                             <TableRow>
-                                <TableHeaderColumn><b>Risk</b></TableHeaderColumn>
-                                <TableHeaderColumn><b>Target</b></TableHeaderColumn>
-                                <TableHeaderColumn><b>Actual</b></TableHeaderColumn>
-                                <TableHeaderColumn><b>Post Trade</b></TableHeaderColumn>
+                                <TableHeaderColumn style={{textAlign: 'right'}}><b>Risk</b></TableHeaderColumn>
+                                <TableHeaderColumn style={{textAlign: 'center'}}><b style={{position: 'relative', left: 33}}>Target</b></TableHeaderColumn>
+                                <TableHeaderColumn style={{textAlign: 'center'}}><b style={{position: 'relative', right: 33}}>Actual</b></TableHeaderColumn>
+                                <TableHeaderColumn><b style={{position: 'relative', right: 20}}>Post Trade</b></TableHeaderColumn>
                             </TableRow>
                             </TableHeader>
                             <TableBody
@@ -150,9 +150,9 @@ export default class PendingTradesList extends React.Component {
                             >
                             {pt.risk.map((risk) => (
                                 <TableRow>
-                                    <TableRowColumn>{risk.name}</TableRowColumn>
-                                    <TableRowColumn>{risk.target}</TableRowColumn>
-                                    <TableRowColumn>{risk.actual}</TableRowColumn>
+                                    <TableRowColumn style={{textAlign: 'right'}}>{risk.name}</TableRowColumn>
+                                    <TableRowColumn style={{textAlign: 'center'}}><span style={{position: 'relative', left: 33}}>{risk.target}</span></TableRowColumn>
+                                    <TableRowColumn style={{textAlign: 'center'}}><span style={{position: 'relative', right: 33}}>{risk.actual}</span></TableRowColumn>
                                     <TableRowColumn>{risk.postTrade}</TableRowColumn>
                                 </TableRow>
                             ))}
