@@ -2,6 +2,7 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import PendingTradesData from '../components/PendingTradesData';
+import RaisedButton from 'material-ui/RaisedButton';
 import {
   Table,
   TableBody,
@@ -10,6 +11,10 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+
+const style = {
+  margin: 12,
+};
 
 var Section = React.createClass({
   handleClick: function(){
@@ -52,6 +57,7 @@ var Section = React.createClass({
 export default class PendingTradesList extends React.Component {
     state = {
         showCheckboxes: false,
+        selectable: false,
     };
 
     getAccount = () => {
@@ -68,7 +74,9 @@ export default class PendingTradesList extends React.Component {
     getAssetDetails = (assets) => {
         return (
             <MuiThemeProvider>
-                <Table>
+                <Table
+                    selectable={this.state.selectable}
+                >
                     <TableHeader
                         displaySelectAll={this.state.showCheckboxes}
                         adjustForCheckbox={this.state.showCheckboxes}    
@@ -94,7 +102,9 @@ export default class PendingTradesList extends React.Component {
                             <TableRowColumn>{asset.currentMV}</TableRowColumn>
                             <TableRowColumn>{asset.currentWeight}</TableRowColumn>
                             <TableRowColumn>{asset.source}</TableRowColumn>
-                            <TableRowColumn>{asset.trades}</TableRowColumn>
+                            <TableRowColumn>
+                                <input type="text" defaultValue={asset.trades} />
+                            </TableRowColumn>
                             <TableRowColumn>{asset.postMV}</TableRowColumn>
                             <TableRowColumn>{asset.postTargetPrct}</TableRowColumn>
                         </TableRow>
@@ -110,6 +120,9 @@ export default class PendingTradesList extends React.Component {
         if (pt != undefined){
             return (
                 <div>
+                    <MuiThemeProvider>
+                        <RaisedButton label="Approve" backgroundColor={'#4CAF50'} labelColor={'#fff'} style={style} buttonStyle={{fontColor: '#fff',}} />
+                    </MuiThemeProvider>
                     <Section title="Equities" percent={pt.equitiesPrct}>
                         {this.getAssetDetails(pt.equitiesRec)}
                     </Section>
